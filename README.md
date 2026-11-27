@@ -5,6 +5,10 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
+**想用就先点右上角 Fork，再按下面 3 步改配置、部署上线。Fork 就是使用方式。**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Garyxie-ing/geo-website-template) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Garyxie-ing/geo-website-template)
+
 ## 这是什么
 
 给品牌、独立开发者、小商家用的官网模板。Fork 回去，改 `config/site.json`，你的品牌名、产品、卖点、价格、FAQ、联系方式就会出现在全站。
