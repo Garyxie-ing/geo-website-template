@@ -95,8 +95,11 @@ npm run build
 
 ## 截图
 
-> TODO：部署后把首页和产品页截图放在 `docs/screenshots/`，并在这里贴出来。
-> 截图建议：首页全屏、产品页、手机端各一张。
+> 截图为本地渲染的示例品牌界面。
+
+![首页](docs/screenshots/01-home.png)
+![产品页](docs/screenshots/02-product.png)
+![首页（手机端）](docs/screenshots/03-home-mobile.png)
 
 ## 技术栈
 
