@@ -1,5 +1,7 @@
 # GEO 官网模板
 
+[English](README.en.md)
+
 > 一个 Fork 就能用的品牌官网模板，为 AI 搜索（GEO）优化：改一个配置文件，部署即上线。
 > A forkable brand website template optimised for AI search (GEO). Edit one config file and deploy. No paid API, no backend, no database.
 
