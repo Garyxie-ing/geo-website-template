@@ -54,6 +54,8 @@ Edit just one file: `config/site.json`
 
 After editing, run `npm run build` again — `public/sitemap.xml`, `public/robots.txt`, and `public/llms.txt` regenerate automatically. No page code needs changing.
 
+Switching industries: `examples/` ships two ready-made configs (education/training and local home services) — copy either one to `config/site.json`; see [examples/README.md](examples/README.md).
+
 To add an article: open `lib/articles.ts` and add one entry following the format of the two example articles. Routes and the sitemap are handled automatically (add one line for the article page in the `pages` list in `scripts/generate-seo.mjs`).
 
 ## Deploy
@@ -71,6 +73,10 @@ npm run build
 ```
 
 Upload everything inside the generated `out/` folder to the host's root directory. `out/` already contains `index.html`, `sitemap.xml`, `robots.txt`, and `llms.txt`.
+
+### GitHub Actions: auto-deploy to GitHub Pages
+
+The repo ships `.github/workflows/pages.yml`: every push to main builds and deploys automatically. First time only, go to Settings → Pages → Build and deployment → Source and pick "GitHub Actions", then visit `https://<your-username>.github.io/geo-website-template/`. The workflow builds with `PAGES_BASE_PATH=/geo-website-template` so links resolve under the subpath; root-domain deploys don't need that variable.
 
 ## Pages
 
@@ -119,3 +125,8 @@ Issues and PRs are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Related projects
+
+- [Multi-AI Workbench](https://github.com/Garyxie-ing/multi-ai-workbench) — manage tasks, prompts and resources across multiple AIs in one interface, zero API cost
+- [MCP Server Templates + Chinese Ecosystem Registry](https://github.com/Garyxie-ing/mcp-server-templates-cn) — TypeScript / Python MCP Server templates and a verified registry of Chinese-ecosystem MCP tools

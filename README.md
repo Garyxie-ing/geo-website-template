@@ -55,6 +55,8 @@ npm run build
 
 改完重新跑 `npm run build`，`public/sitemap.xml`、`public/robots.txt`、`public/llms.txt` 会自动重新生成。不用改任何页面代码。
 
+想换行业：`examples/` 里有教育培训与本地生活服务两套现成配置，复制任意一个为 `config/site.json` 即可，见 [examples/README.md](examples/README.md)。
+
 要加文章：打开 `lib/articles.ts`，按现有两篇示例的格式加一条即可，路由和 sitemap 会自动处理（文章页需在 `scripts/generate-seo.mjs` 的 `pages` 里补一行）。
 
 ## 部署
@@ -72,6 +74,10 @@ npm run build
 ```
 
 把生成的 `out/` 文件夹里的全部内容上传到主机根目录即可。`out/` 里已包含 `index.html`、`sitemap.xml`、`robots.txt`、`llms.txt`。
+
+### GitHub Actions 自动部署到 GitHub Pages
+
+仓库自带 `.github/workflows/pages.yml`：推送到 main 分支即自动构建并部署。首次使用需在仓库 Settings → Pages → Build and deployment → Source 选 "GitHub Actions"，之后访问 `https://<你的用户名>.github.io/geo-website-template/`。工作流构建时设置了 `PAGES_BASE_PATH=/geo-website-template`，站内链接已适配子路径；部署到自有域名或根目录时不需要这个变量。
 
 ## 页面清单
 
@@ -120,3 +126,8 @@ npm run build
 ## 许可证
 
 MIT，见 [LICENSE](LICENSE)。
+
+## 相关项目
+
+- [多 AI 工作台](https://github.com/Garyxie-ing/multi-ai-workbench) — 一个界面管多个 AI 的任务、提示词和资源，零 API 成本
+- [MCP Server 模板 + 中文生态目录](https://github.com/Garyxie-ing/mcp-server-templates-cn) — TypeScript / Python MCP Server 脚手架与中文场景工具目录
